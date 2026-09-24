@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="NOVA Walls — Premium Android Wallpapers">
+  <title>NOVA Walls | Premium Android Wallpapers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#b7ff3c;--bg:#08090b}
+    *{box-sizing:border-box;scrollbar-width:thin;scrollbar-color:#3a3d42 #08090b}
+    html{scroll-behavior:smooth}
+    body{font-family:Tajawal,sans-serif;background:var(--bg);color:#f5f5f5}
+    .noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .glass{background:rgba(18,19,22,.68);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08)}
+    .hero{background:radial-gradient(circle at 75% 20%,rgba(183,255,60,.13),transparent 30%),radial-gradient(circle at 15% 45%,rgba(91,95,255,.12),transparent 30%),linear-gradient(135deg,#0c0e12,#08090b 55%,#10130c)}
+    .glow{box-shadow:0 0 80px rgba(183,255,60,.10)}
+    .wall{content-visibility:auto;contain-intrinsic-size:350px}
+    .wall img{transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .5s}
+    .wall:hover img{transform:scale(1.055);filter:saturate(1.08)}
+    .wall-overlay{opacity:0;transition:.3s;background:linear-gradient(to top,rgba(0,0,0,.94),transparent 65%)}
+    .wall:hover .wall-overlay{opacity:1}
+    .accent{color:var(--accent)}
+    .accent-bg{background:var(--accent);color:#0b0d08}
+    .pill-active{background:var(--accent);color:#0b0d08;border-color:var(--accent)}
+    .modal-bg{background:rgba(0,0,0,.82);backdrop-filter:blur(12px)}
+    .toast{transform:translate(-50%,30px);opacity:0;pointer-events:none;transition:.25s}
+    .toast.show{transform:translate(-50%,0);opacity:1}
+    .hiddenx{display:none!important}
+    .skeleton{background:linear-gradient(90deg,#121417 25%,#1b1e22 50%,#121417 75%);background-size:200% 100%;animation:load 1.3s infinite}
+    @keyframes load{to{background-position:-200% 0}}
+    .no-scroll{overflow:hidden}
+    .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  
+.footer-link{display:block;width:100%;text-align:right;color:#9ca3af;transition:.2s}
+.footer-link:hover{color:#b7ff3c;transform:translateX(-2px)}
+#siteInfoContent h4{font-size:1.05rem;font-weight:800;color:#fff;margin:1.25rem 0 .5rem}
+#siteInfoContent p{margin:.55rem 0;color:#a1a1aa}
+#siteInfoContent ul{margin:.5rem 0;padding-right:1.2rem;list-style:disc}
+#siteInfoContent li{margin:.3rem 0;color:#a1a1aa}
+#siteInfoContent a{color:#b7ff3c}
+
+    html,body{width:100%;max-width:100%;overflow-x:hidden}
+    body{padding-bottom:0;min-width:0;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    img,video,svg{max-width:100%;height:auto}
+    button,input,select,textarea{font:inherit;max-width:100%}
+    .site-container{width:100%;max-width:1280px;margin-inline:auto}
+    .footer-link{min-height:38px;display:flex;align-items:center;justify-content:flex-start;width:100%;text-align:inherit;white-space:normal;line-height:1.4}
+    @media (max-width: 640px){
+      body{padding-bottom:5.5rem}
+      .site-container{padding-inline:14px}
+      footer{margin-top:3rem!important}
+      footer .max-w-7xl{padding:2rem 14px!important}
+      footer .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem 1rem!important}
+      footer .grid>div:first-child{grid-column:1/-1}
+      footer .grid>div:first-child p{max-width:34rem}
+      footer h4{font-size:.95rem!important;margin-bottom:.6rem!important}
+      footer .text-sm{font-size:.875rem!important}
+      footer .space-y-2>*+*{margin-top:.1rem!important}
+      footer .mt-10{margin-top:1.5rem!important}
+      footer .py-12{padding-top:2rem!important;padding-bottom:1.25rem!important}
+      #siteInfoModal{padding:10px}
+      #siteInfoModal>div{max-height:92vh;border-radius:22px}
+      #siteInfoContent{padding:18px!important}
+    }
+    @media (max-width: 380px){
+      footer .grid{gap:1.25rem .75rem!important}
+      footer .grid>div:first-child .text-xl{font-size:1.05rem!important}
+      footer .grid>div:first-child .text-\[10px\]{font-size:8px!important}
+      footer .text-sm{font-size:.82rem!important}
+      .footer-link{font-size:.82rem!important}
+    }
+    @media (min-width: 641px) and (max-width: 900px){
+      footer .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      footer .grid>div:first-child{grid-column:1/-1}
+    }
+
+    @media (max-width: 640px){
+      #modal{padding:8px!important}
+      #modal>div{padding:8px!important;border-radius:22px!important}
+      #modal .grid{gap:14px!important}
+      #modal .max-w-\[420px\]{max-width:min(100%,360px)}
+      #modal h2{font-size:1.55rem!important}
+    }
+
+    .featured-slide{display:none;position:relative;min-height:250px;height:250px;isolation:isolate}
+    .featured-slide.active{display:block;animation:featuredFade .55s ease}
+    @keyframes featuredFade{from{opacity:.35;transform:scale(1.015)}to{opacity:1;transform:scale(1)}}
+    .featured-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+    .featured-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,10,.94) 0%,rgba(7,8,10,.72) 48%,rgba(7,8,10,.18) 100%);z-index:-1}
+    .featured-copy{min-height:250px;height:250px;padding:1.5rem 2rem;display:flex;flex-direction:column;justify-content:center;max-width:620px}
+    .featured-copy h3{font-size:clamp(1.35rem,4vw,2rem);font-weight:900;line-height:1.15;margin:.45rem 0}
+    .featured-copy p{color:#a1a1aa;line-height:1.6;margin:.45rem 0 .8rem;font-size:.9rem}
+    .featured-dot{width:9px;height:9px;border-radius:999px;background:#555;transition:.25s}
+    .featured-dot.active{width:26px;background:#b7ff3c}
+    @media(max-width:640px){
+      .featured-slide,.featured-copy{min-height:210px;height:210px}
+      .featured-overlay{background:linear-gradient(90deg,rgba(7,8,10,.93) 0%,rgba(7,8,10,.64) 55%,rgba(7,8,10,.12) 100%)}
+      .featured-copy{justify-content:center;padding:1rem 1.05rem;max-width:72%}
+      .featured-copy h3{font-size:1.25rem}
+      .featured-copy p{font-size:.78rem;line-height:1.55;margin:.35rem 0 .55rem}
+      .featured-copy .featured-action{width:auto;justify-content:center;padding:.55rem .8rem;font-size:.78rem}
+      .featured-copy .featured-action{width:100%;justify-content:center}
+      .featured-slide .featured-bg{object-position:center}
+    }
+
+    @media (max-width:380px){
+      .featured-slide,.featured-copy{min-height:190px;height:190px}
+      .featured-copy{max-width:78%;padding:.8rem}
+      .featured-copy h3{font-size:1.1rem}
+      .featured-copy p{font-size:.72rem}
+      .featured-copy .featured-action{font-size:.7rem;padding:.45rem .65rem}
+      .featured-slide .absolute.right-3,.featured-slide .absolute.left-3{width:36px;height:36px}
+    }
+
+    .device-pulse{animation:devicePulse 2.4s ease-in-out infinite}
+    @keyframes devicePulse{50%{box-shadow:0 0 0 7px rgba(183,255,60,.04)}}
+    .badge-card{min-height:105px}
+    .theme-light{background:#f4f5f7!important;color:#15171a!important}
+    .theme-light .glass{background:rgba(255,255,255,.82)!important;border-color:rgba(0,0,0,.08)!important;color:#15171a}
+    .theme-light .text-gray-300,.theme-light .text-gray-400,.theme-light .text-neutral-500{color:#5f6368!important}
+    .theme-amoled{background:#000!important}
+    .theme-amoled .glass{background:#050505!important}
+    .search-suggestions{position:absolute;top:calc(100% + 8px);right:0;left:0;z-index:80}
+    .suggestion-item{padding:.7rem .85rem;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer}
+    .suggestion-item:last-child{border-bottom:0}
+    .suggestion-item:hover{background:rgba(255,255,255,.06)}
+</style>
+<link id="novaManifest" rel="manifest" href="data:application/manifest+json,{"name": "NOVA Walls", "short_name": "NOVA", "start_url": ".", "display": "standalone", "background_color": "#08090b", "theme_color": "#b7ff3c", "description": "Premium Android wallpapers", "icons": []}">
+</head>
+<body class="min-w-0">
+<div class="noise"></div>
+
+<!-- Premium Header -->
+<header class="sticky top-0 z-50 glass border-x-0 border-t-0">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="#" onclick="goTop();return false" class="flex items-center gap-3 shrink-0">
+      <div class="w-11 h-11 rounded-2xl accent-bg grid place-items-center text-xl shadow-lg">
+        <i class="fa-solid fa-layer-group"></i>
+      </div>
+      <div>
+        <div class="text-xl font-black tracking-tight">NOVA<span class="accent">Walls</span></div>
+        <div class="text-[9px] uppercase tracking-[.28em] text-neutral-500">Premium Wallpapers</div>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-neutral-400">
+      <button onclick="setCategory('all')">الرئيسية</button>
+      <button onclick="setCategory('AMOLED')">AMOLED</button>
+      <button onclick="setCategory('Nature')">Nature</button>
+      <button onclick="setCategory('Cars')">Cars</button>
+      <button onclick="showFavorites()">المفضلة</button>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <button onclick="toggleSearch()" class="w-10 h-10 rounded-xl glass hover:border-white/20 transition" title="بحث">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button onclick="showFavorites()" class="relative w-10 h-10 rounded-xl glass hover:border-white/20 transition" title="المفضلة">
+        <i class="fa-regular fa-heart"></i>
+        <span id="favBadge" class="hidden absolute -top-1.5 -left-1.5 min-w-5 h-5 px-1 rounded-full bg-rose-500 text-[10px] font-bold items-center justify-center">0</span>
+      </button>
+      <button onclick="openProfile()" class="w-10 h-10 rounded-xl glass hover:border-white/20 transition" title="الملف الشخصي">
+        <i class="fa-regular fa-user"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- New Hero -->
+<section class="hero relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 relative z-10">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs text-neutral-300 mb-6">
+        <span class="w-2 h-2 rounded-full accent-bg"></span>
+        مكتبة خلفيات Premium للأندرويد
+        <span class="text-neutral-600">•</span> تحديثات مستمرة
+      </div>
+      <h1 class="text-5xl md:text-7xl font-black leading-[1.02] tracking-tight">
+        خلفية واحدة
+        <span class="block accent">تغيّر شكل هاتفك.</span>
+      </h1>
+      <p class="text-neutral-400 text-base md:text-lg mt-6 max-w-2xl leading-8">
+        اكتشف خلفيات مختارة بعناية لشاشات Android وAMOLED. تصميم نظيف، جودة عالية وتجربة تحميل سريعة.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <button onclick="scrollToLibrary()" class="accent-bg px-6 py-3.5 rounded-2xl font-extrabold hover:brightness-110 transition">
+          <i class="fa-solid fa-compass ml-2"></i>استكشف المكتبة
+        </button>
+        <button onclick="setCategory('AMOLED');scrollToLibrary()" class="glass px-6 py-3.5 rounded-2xl font-bold hover:bg-white/10 transition">
+          <i class="fa-solid fa-circle-half-stroke ml-2 accent"></i>AMOLED Collection
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-3 gap-3 max-w-xl">
+      <div class="glass rounded-2xl p-4"><div class="text-2xl font-black">4K+</div><div class="text-xs text-neutral-500 mt-1">جودة عالية</div></div>
+      <div class="glass rounded-2xl p-4"><div class="text-2xl font-black">100%</div><div class="text-xs text-neutral-500 mt-1">مجانية</div></div>
+      <div class="glass rounded-2xl p-4"><div class="text-2xl font-black">∞</div><div class="text-xs text-neutral-500 mt-1">اكتشف المزيد</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Search panel -->
+<section id="library" class="max-w-7xl mx-auto px-4 pt-10">
+  <div id="searchPanel" class="glass rounded-3xl p-4 md:p-5 flex flex-col md:flex-row gap-3 items-center">
+    <div class="relative flex-1 w-full">
+      <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500"></i>
+      <input id="search" type="search" placeholder="ابحث: AMOLED، سيارة، طبيعة، فضاء..."
+        class="w-full bg-black/20 border border-white/10 rounded-2xl py-3.5 pr-11 pl-10 outline-none focus:border-white/25 transition">
+      <button id="clearSearch" onclick="clearSearch()" class="hidden absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <select id="sort" onchange="render()" class="w-full md:w-auto bg-neutral-950 border border-white/10 rounded-2xl px-4 py-3.5 outline-none">
+      <option value="newest">الأحدث</option>
+      <option value="popular">الأكثر تحميلاً</option>
+      <option value="liked">الأكثر إعجاباً</option>
+      <option value="az">الاسم</option>
+    </select>
+  </div>
+
+  <div class="mt-3 flex flex-wrap items-center gap-2">
+    <button onclick="toggleAdvancedFilters()" class="glass rounded-xl px-4 py-2.5 text-sm font-bold hover:bg-white/10 transition">
+      <i class="fa-solid fa-sliders ml-2 accent"></i>فلاتر متقدمة
+    </button>
+    <button onclick="setQuickFilter('trending')" class="glass rounded-xl px-4 py-2.5 text-sm font-bold hover:bg-white/10 transition">
+      <i class="fa-solid fa-fire ml-2 text-orange-400"></i>Trending
+    </button>
+    <button onclick="setQuickFilter('recent')" class="glass rounded-xl px-4 py-2.5 text-sm font-bold hover:bg-white/10 transition">
+      <i class="fa-regular fa-clock ml-2 text-sky-400"></i>جديد
+    </button>
+    <button onclick="setQuickFilter('favorites')" class="glass rounded-xl px-4 py-2.5 text-sm font-bold hover:bg-white/10 transition">
+      <i class="fa-regular fa-heart ml-2 text-rose-400"></i>المفضلة
+    </button>
+  </div>
+
+  <div id="advancedFilters" class="hidden mt-3 glass rounded-2xl p-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <label class="text-xs text-neutral-500">الجهاز
+        <select id="deviceFilter" onchange="applyAdvancedFilters()" class="mt-1 w-full bg-neutral-950 border border-white/10 rounded-xl px-3 py-3 text-sm text-white">
+          <option value="all">كل الأجهزة</option>
+          <option value="honor">Honor</option>
+          <option value="samsung">Samsung</option>
+          <option value="xiaomi">Xiaomi</option>
+          <option value="pixel">Google Pixel</option>
+          <option value="iphone">iPhone</option>
+        </select>
+      </label>
+      <label class="text-xs text-neutral-500">النسبة
+        <select id="ratioFilter" onchange="applyAdvancedFilters()" class="mt-1 w-full bg-neutral-950 border border-white/10 rounded-xl px-3 py-3 text-sm text-white">
+          <option value="all">كل المقاسات</option>
+          <option value="phone">عمودي للهاتف</option>
+          <option value="1200x2640">1200×2640</option>
+        </select>
+      </label>
+      <label class="text-xs text-neutral-500">اللون
+        <select id="colorFilter" onchange="applyAdvancedFilters()" class="mt-1 w-full bg-neutral-950 border border-white/10 rounded-xl px-3 py-3 text-sm text-white">
+          <option value="all">كل الألوان</option>
+          <option value="black">أسود</option><option value="blue">أزرق</option>
+          <option value="purple">بنفسجي</option><option value="green">أخضر</option>
+        </select>
+      </label>
+      <label class="text-xs text-neutral-500">النوع
+        <select id="styleFilter" onchange="applyAdvancedFilters()" class="mt-1 w-full bg-neutral-950 border border-white/10 rounded-xl px-3 py-3 text-sm text-white">
+          <option value="all">كل الأنواع</option>
+          <option value="amoled">AMOLED</option><option value="minimal">Minimal</option>
+          <option value="nature">Nature</option><option value="cars">Cars</option>
+          <option value="city">City</option><option value="space">Space</option>
+        </select>
+      </label>
+    </div>
+    <div id="deviceHint" class="mt-3 text-xs text-neutral-500"></div>
+  </div>
+
+  <div class="flex items-center justify-between mt-8 gap-4">
+    <div>
+      <div class="text-xs text-neutral-500">EXPLORE COLLECTIONS</div>
+      <h2 class="text-2xl font-black mt-1">المكتبة</h2>
+    </div>
+    <div id="count" class="text-xs text-neutral-500"></div>
+  </div>
+  <div id="deviceRecommendation" class="mt-4 glass rounded-2xl px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl accent-bg text-black grid place-items-center"><i class="fa-solid fa-mobile-screen"></i></div>
+      <div><div class="text-sm font-bold" id="deviceName">جاري التعرف على جهازك…</div><div class="text-xs text-neutral-500" id="deviceResolution">—</div></div>
+    </div>
+    <button onclick="recommendForDevice()" class="text-xs font-bold text-[#b7ff3c]">عرض المناسب لجهازي <i class="fa-solid fa-arrow-left mr-1"></i></button>
+  </div>
+
+  <div class="flex gap-2 overflow-x-auto py-5">
+    <button data-cat="all" onclick="setCategory('all')" class="cat pill-active border px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap">الكل</button>
+    <button data-cat="AMOLED" onclick="setCategory('AMOLED')" class="cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap">AMOLED</button>
+    <button data-cat="Nature" onclick="setCategory('Nature')" class="cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap">Nature</button>
+    <button data-cat="Minimal" onclick="setCategory('Minimal')" class="cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap">Minimal</button>
+    <button data-cat="Cars" onclick="setCategory('Cars')" class="cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap">Cars</button>
+    <button data-cat="City" onclick="setCategory('City')" class="cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap">City</button>
+    <button data-cat="Space" onclick="setCategory('Space')" class="cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap">Space</button>
+  </div>
+</section>
+
+<!-- Featured banner -->
+
+<section id="featured" class="mt-10">
+  <div class="rounded-[2rem] border border-white/10 bg-[#0d0f12]/90 overflow-hidden shadow-2xl">
+    <div class="relative">
+      <!-- Featured slides are controlled from featuredWallpapers below -->
+      <div id="featuredTrack" class="relative"></div>
+
+      <button onclick="featuredPrev()" aria-label="السابق"
+        class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 border border-white/10 text-white backdrop-blur hover:bg-[#b7ff3c] hover:text-black transition">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <button onclick="featuredNext()" aria-label="التالي"
+        class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 border border-white/10 text-white backdrop-blur hover:bg-[#b7ff3c] hover:text-black transition">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div id="featuredDots" class="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2"></div>
+    </div>
+  </div>
+</section>
+
+
+<main class="max-w-7xl mx-auto px-4 pb-20 w-full">
+  <div id="grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5"></div>
+
+  <div id="empty" class="hidden text-center py-24">
+    <div class="w-20 h-20 rounded-3xl glass grid place-items-center mx-auto text-3xl text-neutral-600"><i class="fa-solid fa-image"></i></div>
+    <h3 class="text-xl font-black mt-5">ما لقيناش نتائج</h3>
+    <p class="text-neutral-500 mt-2">جرّب كلمة أخرى أو رجّع التصنيف للكل.</p>
+    <button onclick="resetAll()" class="mt-5 accent-bg px-5 py-2.5 rounded-xl font-bold">إظهار الكل</button>
+  </div>
+</main>
+
+
+
+<section id="novaCollections" class="mt-12">
+  <div class="flex items-end justify-between gap-3 mb-5">
+    <div><span class="text-[10px] uppercase tracking-[.22em] accent font-black">Explore</span><h2 class="text-2xl md:text-3xl font-black mt-1">Collections</h2></div>
+  </div>
+  <div id="collectionGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"></div>
+</section>
+
+<section id="colorExplorer" class="mt-10">
+  <div class="flex items-end justify-between gap-3 mb-5">
+    <div><span class="text-[10px] uppercase tracking-[.22em] accent font-black">Colors</span><h2 class="text-2xl md:text-3xl font-black mt-1">Explore by Color</h2></div>
+  </div>
+  <div id="colorGrid" class="grid grid-cols-3 sm:grid-cols-6 gap-3"></div>
+</section>
+
+<section id="recommendedSection" class="mt-12 mb-10">
+  <div class="flex items-end justify-between gap-3 mb-5">
+    <div><span class="text-[10px] uppercase tracking-[.22em] accent font-black">For You</span><h2 class="text-2xl md:text-3xl font-black mt-1">Recommended for You</h2></div>
+    <button onclick="showRecommended()" class="text-xs accent font-bold">تحديث</button>
+  </div>
+  <div id="recommendedGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+</section>
+<footer class="border-t border-white/10 bg-[#07080a] mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-[#b7ff3c] text-black flex items-center justify-center font-black">N</div>
+          <div>
+            <div class="font-black text-xl">NOVA <span class="text-[#b7ff3c]">Walls</span></div>
+            <div class="text-[10px] uppercase tracking-[.25em] text-gray-500">Premium Android Wallpapers</div>
+          </div>
+        </div>
+        <p class="text-sm leading-7 text-gray-500">مكتبة خلفيات أندرويد عصرية، مرتبة وسهلة الاستخدام، مع تجربة مصممة لتناسب الشاشات الحديثة.</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-4">NOVA Walls</h4>
+        <div class="space-y-2 text-sm">
+          <button onclick="openSiteInfo('about')" class="footer-link">About</button>
+          <button onclick="openSiteInfo('faq')" class="footer-link">FAQ</button>
+          <button onclick="openSiteInfo('contact')" class="footer-link">Contact</button>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-4">Legal</h4>
+        <div class="space-y-2 text-sm">
+          <button onclick="openSiteInfo('privacy')" class="footer-link">Privacy Policy</button>
+          <button onclick="openSiteInfo('terms')" class="footer-link">Terms of Service</button>
+          <button onclick="openSiteInfo('dmca')" class="footer-link">DMCA / Copyright</button>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-4">Quick Links</h4>
+        <div class="space-y-2 text-sm">
+          <button onclick="scrollToLibrary()" class="footer-link">Wallpaper Library</button>
+          <button onclick="showFavorites()" class="footer-link">My Favorites</button>
+          <button onclick="openProfile()" class="footer-link">My Profile</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-600">
+      <p>© 2026 NOVA Walls. All rights reserved.</p>
+      <p>Made for Android lovers · Premium wallpaper experience</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- Site Info Modal -->
+<div id="siteInfoModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-md p-4" onclick="if(event.target===this)closeSiteInfo()">
+  <div class="w-full max-w-3xl max-h-[88vh] overflow-y-auto rounded-3xl border border-white/10 bg-[#0c0e11] shadow-2xl">
+    <div class="sticky top-0 z-10 flex items-center justify-between gap-4 border-b border-white/10 bg-[#0c0e11]/95 backdrop-blur px-5 py-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-[#b7ff3c] text-black"><i id="siteInfoIcon" class="fa-solid fa-circle-info"></i></div>
+        <div>
+          <h3 id="siteInfoTitle" class="font-black text-lg">About</h3>
+          <p class="text-xs text-gray-500">NOVA Walls</p>
+        </div>
+      </div>
+      <button onclick="closeSiteInfo()" class="w-10 h-10 rounded-xl glass text-gray-300 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="siteInfoContent" class="p-5 md:p-7 text-gray-300 leading-8 text-sm"></div>
+  </div>
+</div>
+
+
+
+<div id="detailsModal" class="hidden fixed inset-0 z-[125] modal-bg p-3 md:p-6 items-center justify-center" onclick="if(event.target===this)closeDetails()">
+  <div class="glass rounded-3xl max-w-5xl w-full max-h-[94vh] overflow-auto p-3 md:p-5">
+    <div class="flex items-center justify-between px-2 py-2">
+      <div><span id="dCat" class="text-[10px] accent font-black uppercase"></span><h3 id="dTitle" class="text-2xl font-black mt-1"></h3></div>
+      <button onclick="closeDetails()" class="w-10 h-10 rounded-xl bg-black/60"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="grid md:grid-cols-[minmax(220px,360px)_1fr] gap-5 mt-3">
+      <div class="aspect-[5/11] max-h-[70vh] rounded-2xl overflow-hidden bg-black/40 mx-auto w-full max-w-[360px]"><img id="dImg" class="w-full h-full object-cover" alt=""></div>
+      <div class="p-2 md:p-5">
+        <div id="dMeta" class="grid grid-cols-2 gap-3"></div>
+        <p id="dDesc" class="text-sm text-neutral-400 leading-8 mt-5"></p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <button id="dFav" class="accent-bg text-black font-black rounded-xl px-5 py-3">❤️ المفضلة</button>
+          <button id="dDownload" class="glass font-black rounded-xl px-5 py-3">⬇️ Download HD</button>
+        </div>
+        <h4 class="font-black mt-8">Similar Wallpapers</h4>
+        <div id="similarGrid" class="grid grid-cols-3 gap-2 mt-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="collectionModal" class="hidden fixed inset-0 z-[126] modal-bg p-3 md:p-6 items-center justify-center" onclick="if(event.target===this)closeCollection()">
+  <div class="glass rounded-3xl max-w-5xl w-full max-h-[94vh] overflow-auto p-4 md:p-6">
+    <div class="flex items-center justify-between"><h3 class="text-2xl font-black">My Collection</h3><button onclick="closeCollection()" class="w-10 h-10 rounded-xl bg-black/60"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="flex gap-2 mt-4 border-b border-white/10 pb-3">
+      <button onclick="collectionTab('favorites')" class="glass rounded-xl px-4 py-2 text-sm">❤️ Favorites</button>
+      <button onclick="collectionTab('downloads')" class="glass rounded-xl px-4 py-2 text-sm">⬇️ Downloads</button>
+      <button onclick="collectionTab('recent')" class="glass rounded-xl px-4 py-2 text-sm">🕐 Recently Viewed</button>
+    </div>
+    <div id="collectionContent" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5"></div>
+  </div>
+</div>
+<!-- Settings Modal -->
+<div id="settingsModal" class="hidden fixed inset-0 z-[130] modal-bg p-4 items-center justify-center" onclick="if(event.target===this)closeSettings()">
+  <div class="glass rounded-3xl max-w-xl w-full max-h-[92vh] overflow-auto p-5 md:p-7">
+    <div class="flex items-center justify-between mb-5">
+      <h3 class="text-xl font-black">الإعدادات</h3>
+      <button onclick="closeSettings()" class="w-10 h-10 rounded-xl bg-black/60"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="space-y-3">
+      <label class="block text-sm font-bold">المظهر
+        <select id="themeSetting" onchange="changeTheme(this.value)" class="mt-2 w-full bg-neutral-950 border border-white/10 rounded-xl px-4 py-3">
+          <option value="dark">Dark Premium</option><option value="amoled">AMOLED Black</option><option value="light">Light</option>
+        </select>
+      </label>
+      <label class="block text-sm font-bold">اللغة
+        <select id="languageSetting" onchange="saveSiteSetting('language',this.value)" class="mt-2 w-full bg-neutral-950 border border-white/10 rounded-xl px-4 py-3">
+          <option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option>
+        </select>
+      </label>
+      <label class="flex items-center justify-between glass rounded-xl p-4">
+        <span><b>إشعارات الموقع</b><small class="block text-xs text-neutral-500 mt-1">تنبيهات داخل الصفحة</small></span>
+        <input id="notifySetting" type="checkbox" onchange="saveSiteSetting('notifications',this.checked)" class="w-5 h-5 accent-[#b7ff3c]">
+      </label>
+      <button onclick="installPWA()" id="installBtn" class="w-full accent-bg text-black font-black rounded-xl py-3">تثبيت NOVA Walls</button>
+      <button onclick="openAdminPanel()" class="w-full glass font-bold rounded-xl py-3">Admin Dashboard</button>
+    </div>
+  </div>
+</div>
+
+<!-- Achievements Modal -->
+<div id="achievementsModal" class="hidden fixed inset-0 z-[130] modal-bg p-4 items-center justify-center" onclick="if(event.target===this)closeAchievements()">
+  <div class="glass rounded-3xl max-w-xl w-full max-h-[92vh] overflow-auto p-5 md:p-7">
+    <div class="flex items-center justify-between"><h3 class="text-xl font-black">الإنجازات</h3><button onclick="closeAchievements()" class="w-10 h-10 rounded-xl bg-black/60"><i class="fa-solid fa-xmark"></i></button></div>
+    <div id="levelBox" class="mt-5"></div>
+    <div id="badgesGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-5"></div>
+  </div>
+</div>
+
+<!-- Admin Modal -->
+<div id="adminModal" class="hidden fixed inset-0 z-[140] modal-bg p-4 items-center justify-center" onclick="if(event.target===this)closeAdminPanel()">
+  <div class="glass rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-auto p-5 md:p-7">
+    <div class="flex items-center justify-between"><div><h3 class="text-xl font-black">Admin Dashboard</h3><p class="text-xs text-neutral-500">لوحة محلية للتجربة وإدارة بيانات الواجهة</p></div><button onclick="closeAdminPanel()" class="w-10 h-10 rounded-xl bg-black/60"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
+      <div class="glass rounded-2xl p-4"><b id="adminWallCount">0</b><span class="block text-xs text-neutral-500 mt-1">خلفيات</span></div>
+      <div class="glass rounded-2xl p-4"><b id="adminFavCount">0</b><span class="block text-xs text-neutral-500 mt-1">مفضلة</span></div>
+      <div class="glass rounded-2xl p-4"><b id="adminDownloadCount">0</b><span class="block text-xs text-neutral-500 mt-1">تنزيلات</span></div>
+      <div class="glass rounded-2xl p-4"><b id="adminFeaturedCount">0</b><span class="block text-xs text-neutral-500 mt-1">Featured</span></div>
+    </div>
+    <div class="mt-5 glass rounded-2xl p-4">
+      <h4 class="font-bold">Featured الحالي</h4>
+      <div id="adminFeaturedList" class="mt-3 space-y-2"></div>
+    </div>
+    <p class="text-xs text-neutral-600 mt-4">هذه لوحة إدارة محلية داخل ملف HTML فقط. لإدارة حقيقية من أي جهاز نحتاج Backend وقاعدة بيانات.</p>
+  </div>
+</div>
+
+<!-- Profile Modal -->
+<div id="profileModal" class="hidden fixed inset-0 z-[110] modal-bg p-4 items-center justify-center">
+  <div class="glass rounded-3xl max-w-2xl w-full max-h-[92vh] overflow-auto p-5 md:p-7 relative">
+    <button onclick="closeProfile()" class="absolute top-4 left-4 w-10 h-10 rounded-full bg-black/60 hover:bg-rose-500 transition">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="text-center pt-3">
+      <div id="avatar" class="w-24 h-24 mx-auto rounded-[2rem] accent-bg grid place-items-center text-4xl font-black shadow-2xl">N</div>
+      <h2 id="profileNameView" class="text-2xl font-black mt-4">NOVA User</h2>
+      <p class="text-neutral-500 text-sm mt-1">عضو في NOVA Walls</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-2 mt-7">
+      <div class="glass rounded-2xl p-4 text-center">
+        <div id="statFav" class="text-2xl font-black">0</div>
+        <div class="text-[10px] text-neutral-500 mt-1">المفضلة</div>
+      </div>
+      <div class="glass rounded-2xl p-4 text-center">
+        <div id="statDownloads" class="text-2xl font-black">0</div>
+        <div class="text-[10px] text-neutral-500 mt-1">تحميلاتي</div>
+      </div>
+      <div class="glass rounded-2xl p-4 text-center">
+        <div id="statTheme" class="text-2xl font-black">Dark</div>
+        <div class="text-[10px] text-neutral-500 mt-1">المظهر</div>
+      </div>
+    </div>
+
+    <div class="mt-7">
+      <div class="text-xs text-neutral-500 mb-2">PROFILE</div>
+      <div class="glass rounded-2xl p-4 space-y-3">
+        <label class="block">
+          <span class="text-xs text-neutral-500">اسم المستخدم</span>
+          <input id="profileName" maxlength="24" class="w-full mt-2 bg-black/20 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/25" placeholder="اكتب اسمك">
+        </label>
+        <label class="block">
+          <span class="text-xs text-neutral-500">نبذة قصيرة</span>
+          <textarea id="profileBio" maxlength="100" rows="2" class="w-full mt-2 bg-black/20 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/25 resize-none" placeholder="مثلاً: عاشق لخلفيات AMOLED"></textarea>
+        </label>
+        <button onclick="saveProfile()" class="w-full accent-bg py-3 rounded-xl font-extrabold">حفظ الملف الشخصي</button>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <div class="text-xs text-neutral-500 mb-2">QUICK ACTIONS</div>
+      <div class="grid sm:grid-cols-2 gap-2">
+        <button onclick="showFavorites();closeProfile()" class="glass p-4 rounded-2xl text-right hover:bg-white/5">
+          <i class="fa-solid fa-heart accent ml-2"></i>المفضلة
+          <span class="block text-xs text-neutral-500 mt-1">شاهد الخلفيات المحفوظة</span>
+        </button>
+        <button onclick="openCollection()" class="glass rounded-2xl p-4 text-right hover:bg-white/5">
+          <i class="fa-solid fa-layer-group text-purple-400 ml-2"></i>My Collection
+          <span class="block text-xs text-neutral-500 mt-1">Favorites + Downloads + Recently Viewed</span>
+        </button>
+        <button onclick="openDownloads()" class="glass p-4 rounded-2xl text-right hover:bg-white/5">
+          <i class="fa-solid fa-download accent ml-2"></i>سجل التحميلات
+          <span class="block text-xs text-neutral-500 mt-1">الخلفيات التي فتحتها للتحميل</span>
+        </button>
+        <button onclick="setCategory('AMOLED');closeProfile();scrollToLibrary()" class="glass p-4 rounded-2xl text-right hover:bg-white/5">
+          <i class="fa-solid fa-circle-half-stroke accent ml-2"></i>AMOLED
+          <span class="block text-xs text-neutral-500 mt-1">استكشف الخلفيات الداكنة</span>
+        </button>
+        <button onclick="clearUserData()" class="glass p-4 rounded-2xl text-right hover:bg-white/5">
+          <i class="fa-solid fa-trash-can text-rose-400 ml-2"></i>مسح بياناتي
+          <span class="block text-xs text-neutral-500 mt-1">المفضلة والاسم وسجل التحميل</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Preview -->
+<div id="modal" class="hidden fixed inset-0 z-[100] modal-bg p-3 md:p-8 items-center justify-center">
+  <div class="glass rounded-3xl max-w-6xl w-full max-h-[94vh] overflow-auto p-3 md:p-5 relative">
+    <button onclick="closeModal()" class="absolute top-4 left-4 z-10 w-10 h-10 rounded-full bg-black/70 hover:bg-rose-500 transition"><i class="fa-solid fa-xmark"></i></button>
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div class="bg-black/30 rounded-2xl w-full max-w-[420px] aspect-[5/11] max-h-[72vh] mx-auto overflow-hidden">
+        <img id="mImg" src="" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="p-2 md:p-5">
+        <div id="mCat" class="accent text-xs font-bold"></div>
+        <h2 id="mTitle" class="text-3xl font-black mt-2"></h2>
+        <p id="mInfo" class="text-neutral-500 mt-3 leading-7"></p>
+        <div class="grid grid-cols-3 gap-2 mt-6">
+          <div class="glass rounded-xl p-3 text-center"><b id="mDownloads"></b><span class="block text-[10px] text-neutral-600">تحميل</span></div>
+          <div class="glass rounded-xl p-3 text-center"><b id="mLikes"></b><span class="block text-[10px] text-neutral-600">إعجاب</span></div>
+          <div class="glass rounded-xl p-3 text-center"><b>1200×2640</b><span class="block text-[10px] text-neutral-600">هاتف</span></div>
+        </div>
+        <div class="flex gap-2 mt-6">
+          <button id="mDownload" class="flex-1 accent-bg py-3.5 rounded-xl font-extrabold"><i class="fa-solid fa-download ml-2"></i>فتح وتحميل</button>
+          <button id="mFav" class="w-14 glass rounded-xl"><i class="fa-regular fa-heart"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast fixed bottom-6 left-1/2 z-[150] glass bg-neutral-900 px-5 py-3 rounded-2xl text-sm shadow-2xl">
+  <i class="fa-solid fa-circle-check accent ml-2"></i><span id="toastText"></span>
+</div>
+
+<script>
+const wallpapers=[
+ {id:1,title:"Neon Waves",cat:"AMOLED",tags:"amoled neon dark abstract",img:"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:12800,likes:3400,newest:10},
+ {id:2,title:"Mountain Reflection",cat:"Nature",tags:"nature mountains lake landscape طبيعة جبال",img:"https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:10200,likes:2900,newest:9},
+ {id:3,title:"Abstract Flow",cat:"Minimal",tags:"minimal abstract art colors",img:"https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:8900,likes:2200,newest:8},
+ {id:4,title:"Dark Cyberpunk",cat:"AMOLED",tags:"amoled cyberpunk dark neon",img:"https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:11750,likes:4100,newest:7},
+ {id:5,title:"Ocean Blue",cat:"Nature",tags:"ocean sea blue water بحر",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:9560,likes:2700,newest:6},
+ {id:6,title:"Night City",cat:"City",tags:"city night urban lights مدينة",img:"https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:9980,likes:3500,newest:5},
+ {id:7,title:"Supercar Night",cat:"Cars",tags:"cars car supercar sports سيارة",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:12640,likes:5200,newest:4},
+ {id:8,title:"Forest Mist",cat:"Nature",tags:"forest nature fog trees غابة",img:"https://images.unsplash.com/photo-1448375240586-882707db888b?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:8190,likes:2100,newest:3},
+ {id:9,title:"Deep Space",cat:"Space",tags:"space galaxy stars universe فضاء",img:"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:14300,likes:5800,newest:2},
+ {id:10,title:"Black Geometry",cat:"Minimal",tags:"minimal black geometry geometric",img:"https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=90&w=1200&h=2640&fit=crop&auto=format",downloads:7320,likes:1900,newest:1}
+];
+
+let category="all", favorites=JSON.parse(localStorage.getItem("nova_favorites")||"[]"), modalId=null;
+let profile=JSON.parse(localStorage.getItem("nova_profile")||'{"name":"NOVA User","bio":"عاشق لخلفيات AMOLED"}');
+let downloadHistory=JSON.parse(localStorage.getItem("nova_downloads")||"[]");
+
+const $=id=>document.getElementById(id);
+const fmt=n=>new Intl.NumberFormat("en",{notation:"compact",maximumFractionDigits:1}).format(n);
+
+function filtered(){
+ const q=$("search").value.trim().toLowerCase();
+ return wallpapers.filter(w=>(category==="all"||w.cat===category)&&(!q||(w.title+" "+w.cat+" "+w.tags).toLowerCase().includes(q)));
+}
+function sorted(list){
+ const s=$("sort").value;
+ return [...list].sort((a,b)=>s==="popular"?b.downloads-a.downloads:s==="liked"?b.likes-a.likes:s==="az"?a.title.localeCompare(b.title):b.newest-a.newest);
+}
+function render(){
+ const list=sorted(filtered()), grid=$("grid");
+ grid.innerHTML="";
+ $("count").textContent=list.length+" خلفيات";
+ $("empty").classList.toggle("hiddenx",list.length!==0);
+ $("clearSearch").classList.toggle("hidden",!$("search").value);
+ list.forEach(w=>{
+  const liked=favorites.includes(w.id);
+  const el=document.createElement("article");
+  el.className="wall relative aspect-[5/11] rounded-3xl overflow-hidden glass";
+  el.innerHTML=`
+   <img src="${w.img}" loading="lazy" alt="${w.title}" class="w-full h-full object-cover">
+   <div class="absolute inset-0 wall-overlay p-3 md:p-4 flex flex-col justify-end">
+    <div class="flex items-end justify-between gap-2">
+     <div class="min-w-0">
+      <span class="accent text-[10px] font-bold">${w.cat}</span>
+      <h3 class="font-black text-sm mt-1 line-clamp-2">${w.title}</h3>
+      <div class="text-[10px] text-neutral-400 mt-1">${fmt(w.downloads)} تحميل • ${fmt(w.likes)} إعجاب</div>
+     </div>
+     <button onclick="fav(${w.id},event)" class="w-9 h-9 shrink-0 rounded-full bg-black/60 ${liked?'text-rose-400':''}">
+      <i class="${liked?'fa-solid':'fa-regular'} fa-heart"></i>
+     </button>
+    </div>
+    <button onclick="openFeaturedPreview(${i})" class="accent-bg w-full mt-3 py-2.5 rounded-xl text-xs font-black">معاينة وتحميل</button>
+   </div>
+  `;
+  grid.appendChild(el);
+ });
+ updateBadge();
+}
+function setCategory(c){
+ category=c;
+ document.querySelectorAll(".cat").forEach(x=>{
+  const active=x.dataset.cat===c;
+  x.className=active?"cat pill-active border px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap":"cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap";
+ });
+ render();
+}
+function fav(id,e){
+ if(e)e.stopPropagation();
+ favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];
+ localStorage.setItem("nova_favorites",JSON.stringify(favorites));
+ render();
+ if(modalId===id) updateModalFav();
+ toast(favorites.includes(id)?"تمت الإضافة للمفضلة":"تمت الإزالة من المفضلة");
+}
+function showFavorites(){
+ category="__fav";
+ const list=sorted(wallpapers.filter(w=>favorites.includes(w.id)));
+ $("grid").innerHTML="";
+ $("count").textContent=list.length+" في المفضلة";
+ $("empty").classList.toggle("hiddenx",list.length!==0);
+ document.querySelectorAll(".cat").forEach(x=>x.className="cat glass border px-5 py-2.5 rounded-full text-sm whitespace-nowrap");
+ list.forEach(w=>{
+  const el=document.createElement("article");
+  el.className="wall relative aspect-[5/11] rounded-3xl overflow-hidden glass";
+  el.innerHTML=`<img src="${w.img}" loading="lazy" alt="${w.title}" class="w-full h-full object-cover">
+  <div class="absolute inset-0 wall-overlay p-4 flex flex-col justify-end"><h3 class="font-black">${w.title}</h3><button onclick="openFeaturedPreview(${i})" class="accent-bg w-full mt-3 py-2.5 rounded-xl text-xs font-black">معاينة</button></div>`;
+  $("grid").appendChild(el);
+ });
+ scrollToLibrary();
+}
+function openModal(id){
+ const w=wallpapers.find(x=>x.id===id); if(!w)return;
+ modalId=id;
+ $("mImg").src=w.img;$("mImg").alt=w.title;$("mTitle").textContent=w.title;$("mCat").textContent=w.cat;
+ $("mInfo").textContent="خلفية عمودية بمقاس الهاتف 1200×2640، مناسبة لشاشات Android الحديثة. افتح الصورة لحفظها.";
+ $("mDownloads").textContent=fmt(w.downloads);$("mLikes").textContent=fmt(w.likes);
+ $("mDownload").onclick=()=>download(w.id);
+ $("mFav").onclick=()=>fav(w.id);
+ updateModalFav();
+ $("modal").classList.remove("hidden");$("modal").classList.add("flex");document.body.classList.add("no-scroll");
+}
+function updateModalFav(){
+ const liked=favorites.includes(modalId);
+ $("mFav").innerHTML=`<i class="${liked?'fa-solid text-rose-400':'fa-regular'} fa-heart"></i>`;
+}
+function closeModal(){$("modal").classList.add("hidden");$("modal").classList.remove("flex");document.body.classList.remove("no-scroll")}
+async function download(id){
+ const w=wallpapers.find(x=>x.id===id); if(!w)return;
+ if(!downloadHistory.includes(id)) downloadHistory.unshift(id);
+ downloadHistory=downloadHistory.slice(0,50);
+ localStorage.setItem("nova_downloads",JSON.stringify(downloadHistory));
+ try{
+   const response=await fetch(w.img,{mode:"cors"});
+   if(!response.ok) throw new Error("download failed");
+   const blob=await response.blob();
+   const url=URL.createObjectURL(blob);
+   const a=document.createElement("a");
+   a.href=url;
+   a.download=(w.title||"nova-wallpaper").replace(/[^a-z0-9\u0600-\u06FF_-]+/gi,"-")+".jpg";
+   document.body.appendChild(a);
+   a.click();
+   a.remove();
+   setTimeout(()=>URL.revokeObjectURL(url),1500);
+   toast("بدأ تحميل الخلفية بنجاح");
+ }catch(e){
+   window.open(w.img,"_blank","noopener");
+   toast("فتحنا الصورة الأصلية — ضغط مطول لحفظها");
+ }
+}
+function updateBadge(){
+ const b=$("favBadge");b.textContent=favorites.length;b.classList.toggle("hidden",!favorites.length);b.classList.toggle("flex",!!favorites.length);
+}
+function clearSearch(){$("search").value="";render();$("search").focus()}
+function resetAll(){category="all";$("search").value="";$("sort").value="newest";setCategory("all")}
+function toggleSearch(){$("searchPanel").scrollIntoView({behavior:"smooth"});setTimeout(()=>$("search").focus(),400)}
+function scrollToLibrary(){$("library").scrollIntoView({behavior:"smooth"})}
+function goTop(){window.scrollTo({top:0,behavior:"smooth"})}
+let toastTimer;
+function toast(t){clearTimeout(toastTimer);$("toastText").textContent=t;$("toast").classList.add("show");toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2300)}
+
+
+function openProfile(){
+ $("profileName").value=profile.name||"";
+ $("profileBio").value=profile.bio||"";
+ $("profileNameView").textContent=profile.name||"NOVA User";
+ $("avatar").textContent=(profile.name||"N").trim().charAt(0).toUpperCase();
+ $("statFav").textContent=favorites.length;
+ $("statDownloads").textContent=downloadHistory.length;
+ $("profileModal").classList.remove("hidden");
+ $("profileModal").classList.add("flex");
+ document.body.classList.add("no-scroll");
+}
+function closeProfile(){
+ $("profileModal").classList.add("hidden");
+ $("profileModal").classList.remove("flex");
+ document.body.classList.remove("no-scroll");
+}
+function saveProfile(){
+ const name=$("profileName").value.trim()||"NOVA User";
+ const bio=$("profileBio").value.trim()||"عاشق لخلفيات AMOLED";
+ profile={name,bio};
+ localStorage.setItem("nova_profile",JSON.stringify(profile));
+ $("profileNameView").textContent=name;
+ $("avatar").textContent=name.charAt(0).toUpperCase();
+ toast("تم حفظ الملف الشخصي ✓");
+}
+function openDownloads(){
+ closeProfile();
+ if(!downloadHistory.length){toast("سجل التحميلات فارغ");return}
+ const ids=[...new Set(downloadHistory)];
+ const oldCategory=category;
+ category="all";
+ $("search").value="";
+ const list=ids.map(id=>wallpapers.find(w=>w.id===id)).filter(Boolean);
+ $("grid").innerHTML="";
+ $("count").textContent=list.length+" في سجل التحميلات";
+ $("empty").classList.toggle("hiddenx",list.length!==0);
+ list.forEach(w=>{
+  const el=document.createElement("article");
+  el.className="wall relative aspect-[5/11] rounded-3xl overflow-hidden glass";
+  el.innerHTML=`<img src="${w.img}" loading="lazy" alt="${w.title}" class="w-full h-full object-cover">
+  <div class="absolute inset-0 wall-overlay p-4 flex flex-col justify-end"><h3 class="font-black">${w.title}</h3><button onclick="openFeaturedPreview(${i})" class="accent-bg w-full mt-3 py-2.5 rounded-xl text-xs font-black">معاينة</button></div>`;
+  $("grid").appendChild(el);
+ });
+ category=oldCategory;
+ scrollToLibrary();
+}
+function clearUserData(){
+ if(!confirm("واش متأكد بغيتي تمسح جميع بيانات الملف الشخصي والمفضلة وسجل التحميل؟"))return;
+ localStorage.removeItem("nova_profile");
+ localStorage.removeItem("nova_favorites");
+ localStorage.removeItem("nova_downloads");
+ favorites=[];downloadHistory=[];profile={name:"NOVA User",bio:"عاشق لخلفيات AMOLED"};
+ updateBadge();openProfile();render();toast("تم مسح البيانات المحلية");
+}
+
+$("search").addEventListener("input",render);
+$("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+$("profileModal").addEventListener("click",e=>{if(e.target.id==="profileModal")closeProfile()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();closeProfile()}});
+render();
+
+const siteInfoData={
+  about:{
+    title:"About NOVA Walls", icon:"fa-solid fa-circle-info",
+    html:`<p><strong class="text-white">NOVA Walls</strong> هي منصة مخصصة لاكتشاف خلفيات أندرويد بجودة عالية وتصميم عصري.</p>
+    <h4>هدفنا</h4><p>تنظيم الخلفيات حسب الأسلوب والتصنيف، وتوفير تجربة سريعة على الهاتف مع أدوات البحث، المعاينة، المفضلة والملف الشخصي.</p>
+    <h4>التجربة</h4><ul><li>تصنيفات واضحة وسهلة التصفح.</li><li>معاينة الخلفية قبل اختيارها.</li><li>حفظ المفضلة محلياً على جهازك.</li><li>واجهة متجاوبة مع الهواتف والأجهزة اللوحية.</li></ul>
+    <p>ملاحظة: NOVA Walls في هذه النسخة واجهة ويب تجريبية، وبعض الخلفيات قد تكون مستضافة على خدمات خارجية.</p>`
+  },
+  contact:{
+    title:"Contact", icon:"fa-regular fa-envelope",
+    html:`<p>يسعدنا استقبال ملاحظاتك، اقتراحاتك وطلبات إزالة المحتوى.</p>
+    <h4>الدعم العام</h4><p>راسل إدارة الموقع عبر البريد:</p>
+    <p><a href="mailto:contact@novawalls.com">contact@novawalls.com</a></p>
+    <h4>حقوق النشر</h4><p>لإرسال إشعار حقوق نشر، استعمل قسم <strong class="text-white">DMCA / Copyright</strong> الموجود في هذه الصفحة.</p>
+    <p class="text-xs">قبل إطلاق الموقع فعلياً، استبدل البريد التجريبي ببريدك الرسمي.</p>`
+  },
+  privacy:{
+    title:"Privacy Policy", icon:"fa-solid fa-shield-halved",
+    html:`<p>هذه الصفحة توضح بشكل مبسط كيفية تعامل NOVA Walls مع البيانات في هذه النسخة.</p>
+    <h4>البيانات المحفوظة محلياً</h4><p>المفضلة، بيانات الملف الشخصي وسجل التنزيلات يتم حفظها في <strong class="text-white">localStorage</strong> داخل متصفحك في هذه النسخة.</p>
+    <h4>البيانات الشخصية</h4><p>لا يطلب الموقع في الواجهة الحالية إنشاء حساب أو إدخال كلمة مرور. لا ترسل معلومات حساسة داخل نموذج الملف الشخصي.</p>
+    <h4>الخدمات الخارجية</h4><p>قد تستخدم الصفحة خدمات خارجية مثل الخطوط أو الصور المستضافة خارج موقع NOVA Walls. هذه الخدمات قد تستقبل بيانات تقنية وفق سياساتها الخاصة.</p>
+    <h4>ملفات تعريف الارتباط</h4><p>هذه النسخة لا تعتمد على ملفات تعريف ارتباط خاصة بالموقع لإدارة المفضلة؛ يتم استخدام التخزين المحلي للمتصفح.</p>
+    <p class="text-xs">هذه صياغة عامة لنسخة تجريبية وليست استشارة قانونية. راجع السياسة قانونياً قبل نشر الموقع تجارياً.</p>`
+  },
+  terms:{
+    title:"Terms of Service", icon:"fa-solid fa-file-contract",
+    html:`<p>باستخدام NOVA Walls، توافق على استخدام الموقع بطريقة قانونية ومسؤولة.</p>
+    <h4>الاستخدام المقبول</h4><ul><li>استخدام الموقع لتصفح واختيار الخلفيات للاستخدام الشخصي أو وفق الترخيص المرتبط بكل صورة.</li><li>عدم محاولة تعطيل الموقع أو إساءة استخدام خدماته.</li><li>عدم إعادة توزيع محتوى لا تملك حقوقه.</li></ul>
+    <h4>المحتوى</h4><p>وجود صورة داخل الموقع لا يعني تلقائياً أن NOVA Walls يملك حقوقها. يجب التحقق من ترخيص كل صورة قبل استخدامها تجارياً.</p>
+    <h4>تعديل الخدمة</h4><p>يمكن تغيير الأقسام أو الميزات أو إيقاف جزء من الموقع عند الحاجة.</p>
+    <p class="text-xs">هذه شروط عامة لنسخة تجريبية ويُنصح بمراجعتها قانونياً قبل الإطلاق الرسمي.</p>`
+  },
+  dmca:{
+    title:"DMCA / Copyright", icon:"fa-solid fa-copyright",
+    html:`<p>نحترم حقوق المصورين والمصممين وأصحاب حقوق النشر.</p>
+    <h4>طلب إزالة محتوى</h4><p>إذا كنت صاحب حقوق صورة وتعتقد أن استخدامها على الموقع ينتهك حقوقك، أرسل إشعاراً واضحاً إلى:</p>
+    <p><a href="mailto:copyright@novawalls.com">copyright@novawalls.com</a></p>
+    <h4>يفضل أن يتضمن الإشعار</h4><ul><li>اسم صاحب الحقوق ووسيلة تواصل موثوقة.</li><li>وصف العمل المحمي بحقوق النشر.</li><li>رابط الصفحة أو الصورة المعنية.</li><li>شرح سبب اعتقادك بوجود انتهاك.</li><li>أي مستندات أو معلومات تساعد في التحقق من الملكية.</li></ul>
+    <h4>بعد استلام الطلب</h4><p>يمكن لإدارة الموقع مراجعة البلاغ واتخاذ الإجراء المناسب، مثل إخفاء المحتوى مؤقتاً أو إزالته عند ثبوت المشكلة.</p>
+    <p class="text-xs">ملاحظة: إجراءات DMCA القانونية الدقيقة تعتمد على البلد ومكان استضافة الموقع. استشر مختصاً قانونياً عند الحاجة.</p>`
+  },
+  faq:{
+    title:"FAQ", icon:"fa-regular fa-circle-question",
+    html:`<h4>هل الموقع مجاني؟</h4><p>الواجهة الحالية مصممة لتكون مجانية للاستخدام.</p>
+    <h4>أين تحفظ المفضلة؟</h4><p>في هذه النسخة تحفظ المفضلة محلياً داخل متصفح جهازك.</p>
+    <h4>هل أحتاج إلى حساب؟</h4><p>لا. الملف الشخصي الحالي محلي ولا يحتاج إلى تسجيل دخول.</p>
+    <h4>لماذا لا أجد خلفية معينة؟</h4><p>استخدم البحث أو التصنيفات. ويمكن إضافة المزيد من الخلفيات إلى قاعدة بيانات الموقع لاحقاً.</p>
+    <h4>هل كل الخلفيات مسموح استخدامها تجارياً؟</h4><p>ليس بالضرورة. تحقق دائماً من ترخيص الصورة ومصدرها قبل الاستخدام التجاري.</p>
+    <h4>كيف أتواصل مع الموقع؟</h4><p>من قسم Contact في أسفل الصفحة.</p>`
+  }
+};
+
+function openSiteInfo(type){
+  const data=siteInfoData[type]||siteInfoData.about;
+  document.getElementById("siteInfoTitle").textContent=data.title;
+  document.getElementById("siteInfoIcon").className=data.icon;
+  document.getElementById("siteInfoContent").innerHTML=data.html;
+  const m=document.getElementById("siteInfoModal");
+  m.classList.remove("hidden"); m.classList.add("flex");
+  document.body.classList.add("overflow-hidden");
+}
+function closeSiteInfo(){
+  const m=document.getElementById("siteInfoModal");
+  if(m){m.classList.add("hidden");m.classList.remove("flex")}
+  document.body.classList.remove("overflow-hidden");
+}
+
+
+/* =========================
+   FEATURED WALLPAPER SLIDER
+   لتغيير الخلفيات مستقبلاً: عدّل فقط هذه القائمة.
+   ========================= */
+const featuredWallpapers=[
+  {
+    id:101,
+    title:"Neon Dream",
+    category:"AMOLED",
+    description:"ألوان نيون عميقة بتصميم عمودي مصمم لشاشة الهاتف.",
+    image:"https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=90&w=1200&h=2640&fit=crop&auto=format"
+  },
+  {
+    id:102,
+    title:"Purple Horizon",
+    category:"ABSTRACT",
+    description:"تدرجات بنفسجية ناعمة تمنح شاشة هاتفك مظهراً عصرياً.",
+    image:"https://images.unsplash.com/photo-1557683316-973673baf926?q=90&w=1200&h=2640&fit=crop&auto=format"
+  },
+  {
+    id:103,
+    title:"Ocean Night",
+    category:"NATURE",
+    description:"خلفية داكنة مستوحاة من البحر والليل، مناسبة للوضع الداكن.",
+    image:"https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=90&w=1200&h=2640&fit=crop&auto=format"
+  },
+  {
+    id:104,
+    title:"Cosmic Black",
+    category:"SPACE",
+    description:"ستايل فضائي داكن بتفاصيل عميقة لشاشات AMOLED.",
+    image:"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=90&w=1200&h=2640&fit=crop&auto=format"
+  }
+];
+
+let featuredIndex=0;
+let featuredTimer=null;
+
+function renderFeatured(){
+  const track=document.getElementById("featuredTrack");
+  const dots=document.getElementById("featuredDots");
+  if(!track||!dots)return;
+
+  track.innerHTML=featuredWallpapers.map((w,i)=>`
+    <article class="featured-slide ${i===featuredIndex?'active':''}">
+      <img class="featured-bg" src="${w.image}" alt="${w.title}" loading="${i===0?'eager':'lazy'}">
+      <div class="featured-overlay"></div>
+      <div class="featured-copy">
+        <span class="inline-flex w-fit items-center rounded-full bg-[#b7ff3c] px-3 py-1 text-[10px] font-black tracking-[.16em] text-black">${w.category}</span>
+        <h3>${w.title}</h3>
+        <p>${w.description}</p>
+        <button class="featured-action w-fit inline-flex items-center gap-2 rounded-2xl bg-[#b7ff3c] text-black font-black px-5 py-3 hover:scale-[1.02] transition" onclick="openFeaturedPreview(${i})">
+          <i class="fa-solid fa-eye"></i> معاينة الخلفية
+        </button>
+      </div>
+    </article>
+  `).join("");
+
+  dots.innerHTML=featuredWallpapers.map((_,i)=>
+    `<button onclick="goFeatured(${i})" class="featured-dot ${i===featuredIndex?'active':''}" aria-label="الخلفية ${i+1}"></button>`
+  ).join("");
+}
+
+function goFeatured(index){
+  featuredIndex=(index+featuredWallpapers.length)%featuredWallpapers.length;
+  renderFeatured();
+  restartFeatured();
+}
+
+function featuredNext(){
+  featuredIndex=(featuredIndex+1)%featuredWallpapers.length;
+  renderFeatured();
+  restartFeatured();
+}
+
+function featuredPrev(){
+  featuredIndex=(featuredIndex-1+featuredWallpapers.length)%featuredWallpapers.length;
+  renderFeatured();
+  restartFeatured();
+}
+
+function startFeatured(){
+  clearInterval(featuredTimer);
+  featuredTimer=setInterval(()=>featuredNext(),5000);
+}
+
+function restartFeatured(){
+  startFeatured();
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  renderFeatured();
+  startFeatured();
+
+  const featured=document.getElementById("featured");
+  if(featured){
+    featured.addEventListener("mouseenter",()=>clearInterval(featuredTimer));
+    featured.addEventListener("mouseleave",startFeatured);
+    featured.addEventListener("touchstart",()=>clearInterval(featuredTimer),{passive:true});
+    featured.addEventListener("touchend",startFeatured,{passive:true});
+  }
+});
+
+
+/* =========================
+   NOVA WALLS PREMIUM ENGINE
+   ========================= */
+const novaSettings=JSON.parse(localStorage.getItem("nova_settings")||'{"theme":"dark","language":"ar","notifications":true}');
+const deviceInfo=(function(){
+  const ua=navigator.userAgent||"";
+  let brand="Android";
+  if(/HONOR|HUAWEI/i.test(ua)) brand="Honor";
+  else if(/Samsung/i.test(ua)) brand="Samsung";
+  else if(/Xiaomi|Redmi|POCO/i.test(ua)) brand="Xiaomi";
+  else if(/Pixel/i.test(ua)) brand="Google Pixel";
+  else if(/iPhone|iPad/i.test(ua)) brand="iPhone";
+  return {brand, width:Math.max(screen.width,screen.height), height:Math.min(screen.width,screen.height), dpr:window.devicePixelRatio||1};
+})();
+
+function deviceLabel(){
+  if(deviceInfo.brand==="Honor") return "Honor • هاتف Android";
+  return deviceInfo.brand+" • هاتف";
+}
+function detectDevice(){
+  const name=document.getElementById("deviceName"), res=document.getElementById("deviceResolution");
+  if(name) name.textContent=deviceLabel();
+  if(res) res.textContent=`شاشتك الحالية: ${screen.width}×${screen.height} • DPR ${deviceInfo.dpr}`;
+  const hint=document.getElementById("deviceHint");
+  if(hint) hint.textContent=`اقتراح تلقائي: خلفيات عمودية 1200×2640 مناسبة للهواتف الحديثة. جهازك المكتشف: ${deviceInfo.brand}.`;
+}
+function recommendForDevice(){
+  const df=document.getElementById("deviceFilter");
+  if(df){df.value=deviceInfo.brand==="Honor"?"honor":deviceInfo.brand==="Samsung"?"samsung":deviceInfo.brand==="Xiaomi"?"xiaomi":deviceInfo.brand==="Google Pixel"?"pixel":deviceInfo.brand==="iPhone"?"iphone":"all";}
+  const rf=document.getElementById("ratioFilter"); if(rf) rf.value="1200x2640";
+  applyAdvancedFilters(); scrollToLibrary();
+}
+function toggleAdvancedFilters(){
+  const el=document.getElementById("advancedFilters"); if(el) el.classList.toggle("hidden");
+}
+function setQuickFilter(type){
+  if(type==="favorites"){showFavorites();return}
+  category="all";
+  const sort=document.getElementById("sort");
+  if(sort) sort.value=type==="trending"?"popular":"newest";
+  render();
+  scrollToLibrary();
+}
+function applyAdvancedFilters(){renderPremium();}
+
+function getWallpaperMeta(w){
+  const t=(w.tags||"")+" "+(w.cat||"")+" "+(w.title||"");
+  return {
+    device:["honor","samsung","xiaomi","pixel","iphone"].find(x=>t.toLowerCase().includes(x))||"all",
+    color:["black","blue","purple","green"].find(x=>t.toLowerCase().includes(x))||"all",
+    ratio:"1200x2640",
+    style:(w.cat||"").toLowerCase()
+  };
+}
+function renderPremium(){
+  // Preserve the site's existing renderer while applying advanced filters to its source list.
+  const original=window.__novaOriginalWallpapers||wallpapers.slice();
+  let list=original.slice();
+  const q=(document.getElementById("search")?.value||"").trim().toLowerCase();
+  const df=document.getElementById("deviceFilter")?.value||"all";
+  const rf=document.getElementById("ratioFilter")?.value||"all";
+  const cf=document.getElementById("colorFilter")?.value||"all";
+  const sf=document.getElementById("styleFilter")?.value||"all";
+  if(q) list=list.filter(w=>(w.title+" "+w.cat+" "+w.tags).toLowerCase().includes(q));
+  if(category!=="all" && category!=="__fav") list=list.filter(w=>w.cat===category);
+  if(category==="__fav") list=list.filter(w=>favorites.includes(w.id));
+  if(df!=="all") list=list.filter(w=>getWallpaperMeta(w).device===df || (df==="honor" && /amoled|dark/i.test(w.cat+" "+w.tags)));
+  if(rf!=="all") list=list.filter(w=>rf==="phone"||getWallpaperMeta(w).ratio===rf);
+  if(cf!=="all") list=list.filter(w=>getWallpaperMeta(w).color===cf || (cf==="black"&&/dark|black|amoled/i.test(w.cat+" "+w.tags)));
+  if(sf!=="all") list=list.filter(w=>getWallpaperMeta(w).style===sf);
+  const sort=document.getElementById("sort")?.value||"newest";
+  list.sort((a,b)=>sort==="popular"?b.downloads-a.downloads:sort==="liked"?b.likes-a.likes:sort==="az"?a.title.localeCompare(b.title):b.newest-a.newest);
+  const grid=document.getElementById("grid");
+  if(grid){
+    grid.innerHTML=list.map(cardHTML).join("");
+    if(!list.length) grid.innerHTML='<div class="col-span-full text-center py-16 text-neutral-500">ما لقيناش نتائج بهاد الفلاتر. جرب اختيار آخر.</div>';
+  }
+  const count=document.getElementById("count"); if(count) count.textContent=`${list.length} خلفية`;
+  updateBadge();
+}
+window.__novaOriginalWallpapers=wallpapers.slice();
+
+function cardHTML(w){
+  const isFav=favorites.includes(w.id);
+  return `<article class="glass rounded-3xl overflow-hidden group relative">
+    <button onclick="fav(${w.id})" class="absolute top-3 left-3 z-10 w-10 h-10 rounded-full bg-black/60 backdrop-blur border border-white/10 grid place-items-center">
+      <i class="${isFav?'fa-solid text-rose-400':'fa-regular'} fa-heart"></i>
+    </button>
+    <button onclick="openModal(${w.id})" class="block w-full aspect-[5/11] overflow-hidden">
+      <img src="${w.img}" alt="${w.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+    </button>
+    <div class="p-4">
+      <div class="flex items-center justify-between gap-2"><span class="text-[10px] font-black accent">${w.cat}</span><span class="text-[10px] text-neutral-500">1200×2640</span></div>
+      <h3 class="font-black mt-1 truncate">${w.title}</h3>
+      <div class="flex items-center justify-between text-xs text-neutral-500 mt-2"><span><i class="fa-solid fa-download ml-1"></i>${formatNum(w.downloads)}</span><span><i class="fa-regular fa-heart ml-1"></i>${formatNum(w.likes)}</span></div>
+      <button onclick="download(${w.id})" class="accent-bg text-black font-black text-xs rounded-xl py-2.5 mt-3 w-full"><i class="fa-solid fa-download ml-1"></i> تحميل الخلفية</button>
+    </div>
+  </article>`;
+}
+function formatNum(n){return Number(n||0).toLocaleString("en-US");}
+
+function setupSmartSearch(){
+  const input=document.getElementById("search"); if(!input)return;
+  const wrap=input.parentElement;
+  let box=document.getElementById("searchSuggestions");
+  if(!box){box=document.createElement("div");box.id="searchSuggestions";box.className="search-suggestions glass rounded-2xl overflow-hidden hidden";wrap.appendChild(box);}
+  input.addEventListener("input",()=>{
+    const q=input.value.trim().toLowerCase(); document.getElementById("clearSearch")?.classList.toggle("hidden",!q);
+    if(!q){box.classList.add("hidden");renderPremium();return}
+    const results=window.__novaOriginalWallpapers.filter(w=>(w.title+" "+w.cat+" "+w.tags).toLowerCase().includes(q)).slice(0,5);
+    box.innerHTML=results.length?results.map(w=>`<div class="suggestion-item" onclick="chooseSuggestion('${String(w.title).replace(/'/g,"\\'")}')"><b>${w.title}</b><span class="block text-xs text-neutral-500">${w.cat} • 1200×2640</span></div>`).join(""):'<div class="p-3 text-sm text-neutral-500">ما كايناش نتيجة مطابقة.</div>';
+    box.classList.remove("hidden"); renderPremium();
+  });
+  document.addEventListener("click",e=>{if(!wrap.contains(e.target))box.classList.add("hidden")});
+}
+function chooseSuggestion(title){
+  const input=document.getElementById("search"); if(input) input.value=title;
+  document.getElementById("searchSuggestions")?.classList.add("hidden"); renderPremium();
+}
+
+function xpData(){
+  const xp=favorites.length*20+downloadHistory.length*30;
+  const level=Math.max(1,Math.floor(xp/100)+1), current=xp%100;
+  return {xp,level,current,next:100};
+}
+function openAchievements(){
+  document.getElementById("achievementsModal")?.classList.replace("hidden","flex");
+  const d=xpData(), level=document.getElementById("levelBox");
+  if(level) level.innerHTML=`<div class="glass rounded-2xl p-4"><div class="flex justify-between"><b>Level ${d.level}</b><span class="text-xs text-neutral-500">${d.xp} XP</span></div><div class="h-2 bg-black/50 rounded-full mt-3 overflow-hidden"><div class="h-full bg-[#b7ff3c]" style="width:${d.current}%"></div></div><p class="text-xs text-neutral-500 mt-2">${100-d.current} XP للمستوى التالي</p></div>`;
+  const badges=[
+    ["fa-heart","First Favorite",favorites.length>=1],
+    ["fa-download","Downloader",downloadHistory.length>=1],
+    ["fa-fire","Hot Hunter",downloadHistory.length>=5],
+    ["fa-star","Collector",favorites.length>=5],
+    ["fa-crown","VIP Hunter",downloadHistory.length>=10],
+    ["fa-mobile-screen","Phone Ready",true]
+  ];
+  const grid=document.getElementById("badgesGrid");
+  if(grid) grid.innerHTML=badges.map(b=>`<div class="badge-card glass rounded-2xl p-3 ${b[2]?'':'opacity-35'}"><i class="fa-solid ${b[0]} ${b[2]?'accent':'text-neutral-600'} text-xl"></i><b class="block text-xs mt-2">${b[1]}</b><span class="text-[10px] text-neutral-500">${b[2]?'Unlocked':'Locked'}</span></div>`).join("");
+}
+function closeAchievements(){document.getElementById("achievementsModal")?.classList.replace("flex","hidden");}
+
+function openSettings(){
+  const m=document.getElementById("settingsModal"); if(!m)return;
+  m.classList.replace("hidden","flex");
+  const t=document.getElementById("themeSetting"), l=document.getElementById("languageSetting"), n=document.getElementById("notifySetting");
+  if(t)t.value=novaSettings.theme;if(l)l.value=novaSettings.language;if(n)n.checked=novaSettings.notifications;
+}
+function closeSettings(){document.getElementById("settingsModal")?.classList.replace("flex","hidden");}
+function saveSiteSetting(k,v){novaSettings[k]=v;localStorage.setItem("nova_settings",JSON.stringify(novaSettings));if(k==="language")toast("تم حفظ اللغة");if(k==="notifications")toast(v?"الإشعارات مفعلة":"الإشعارات متوقفة");}
+function changeTheme(v){
+  novaSettings.theme=v;localStorage.setItem("nova_settings",JSON.stringify(novaSettings));
+  document.body.classList.remove("theme-light","theme-amoled");
+  if(v==="light")document.body.classList.add("theme-light");
+  if(v==="amoled")document.body.classList.add("theme-amoled");
+}
+function applySavedTheme(){changeTheme(novaSettings.theme)}
+
+function openAdminPanel(){
+  const m=document.getElementById("adminModal"); if(!m)return;
+  m.classList.replace("hidden","flex");
+  const ids=["adminWallCount","adminFavCount","adminDownloadCount","adminFeaturedCount"];
+  const vals=[wallpapers.length,favorites.length,downloadHistory.length,featuredWallpapers.length];
+  ids.forEach((id,i)=>{const e=document.getElementById(id);if(e)e.textContent=vals[i]});
+  const list=document.getElementById("adminFeaturedList");
+  if(list) list.innerHTML=featuredWallpapers.map((w,i)=>`<div class="flex items-center gap-3 glass rounded-xl p-2"><img src="${w.image}" class="w-10 h-12 object-cover rounded-lg"><div class="flex-1"><b class="text-sm">${w.title}</b><span class="block text-xs text-neutral-500">${w.category}</span></div><button onclick="goFeatured(${i});closeAdminPanel()" class="text-xs accent">عرض</button></div>`).join("");
+}
+function closeAdminPanel(){document.getElementById("adminModal")?.classList.replace("flex","hidden");}
+
+let deferredInstallPrompt=null;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredInstallPrompt=e;});
+async function installPWA(){
+  if(deferredInstallPrompt){deferredInstallPrompt.prompt();deferredInstallPrompt=null;return}
+  toast("إذا لم يظهر التثبيت، أضف الصفحة للشاشة الرئيسية من قائمة المتصفح.");
+}
+
+function openFeaturedPreview(index=featuredIndex){
+  const w=featuredWallpapers[index]; if(!w)return;
+  const m=document.getElementById("modal"); if(!m)return;
+  document.getElementById("mImg").src=w.image;
+  document.getElementById("mTitle").textContent=w.title;
+  document.getElementById("mCat").textContent=w.category;
+  const desc=document.getElementById("mDesc"); if(desc)desc.textContent=w.description;
+  const favBtn=document.getElementById("mFavBtn"); if(favBtn)favBtn.style.display="none";
+  const dl=document.getElementById("mDownload"); if(dl){dl.onclick=()=>{window.open(w.image,"_blank");toast("تم فتح الخلفية بالحجم العمودي");};}
+  m.classList.replace("hidden","flex");
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  detectDevice(); setupSmartSearch(); applySavedTheme(); renderPremium();
+  // Featured buttons point to the actual featured preview.
+  document.querySelectorAll("#featuredTrack .featured-action").forEach((b,i)=>b.onclick=()=>openFeaturedPreview(i));
+});
+
+
+const __novaBaseRender=render;
+render=function(){ 
+  try{ renderPremium(); }catch(e){ __novaBaseRender(); }
+};
+
+
+/* ===== NOVA WALLS v2 — Collections / Details / Recommendations / PWA ===== */
+const novaRecent=JSON.parse(localStorage.getItem("nova_recent")||"[]");
+
+const novaCollections=[
+  {name:"AMOLED Black",cat:"AMOLED",icon:"fa-moon",q:"dark"},
+  {name:"Luxury Cars",cat:"Cars",icon:"fa-car",q:"car"},
+  {name:"Nature",cat:"Nature",icon:"fa-mountain-sun",q:"nature"},
+  {name:"Cyberpunk",cat:"City",icon:"fa-city",q:"cyber"},
+  {name:"Minimal",cat:"Minimal",icon:"fa-shapes",q:"minimal"},
+  {name:"Space",cat:"Space",icon:"fa-planet-ringed",q:"space"}
+];
+
+function renderCollections(){
+  const el=document.getElementById("collectionGrid"); if(!el)return;
+  el.innerHTML=novaCollections.map((c,i)=>`
+    <button onclick="collectionExplore('${c.cat}','${c.q}')" class="relative h-32 md:h-40 rounded-2xl overflow-hidden glass text-right group">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+      <div class="absolute bottom-3 right-3 left-3 z-10"><i class="fa-solid ${c.icon} accent"></i><b class="block mt-1">${c.name}</b></div>
+      <div class="absolute inset-0 opacity-20 group-hover:opacity-35 transition bg-gradient-to-br from-[#b7ff3c]/40 to-purple-500/20"></div>
+    </button>`).join("");
+}
+function collectionExplore(cat,q){
+  category=cat; const s=document.getElementById("search");if(s)s.value="";
+  renderPremium();scrollToLibrary();toast("تم فتح Collection: "+cat);
+}
+function renderColors(){
+  const colors=[
+    ["black","أسود","bg-black"],["blue","أزرق","bg-blue-700"],["purple","بنفسجي","bg-purple-700"],
+    ["green","أخضر","bg-green-600"],["red","أحمر","bg-red-600"],["white","أبيض","bg-white"]
+  ];
+  const el=document.getElementById("colorGrid");if(!el)return;
+  el.innerHTML=colors.map(c=>`<button onclick="filterColor('${c[0]}')" class="glass rounded-2xl p-3 text-center hover:-translate-y-0.5 transition"><span class="block w-10 h-10 mx-auto rounded-full ${c[2]} border border-white/10"></span><span class="block text-xs font-bold mt-2">${c[1]}</span></button>`).join("");
+}
+function filterColor(c){
+  const f=document.getElementById("colorFilter");if(f){f.value=c;applyAdvancedFilters();}
+  scrollToLibrary();
+}
+function viewed(id){
+  const i=novaRecent.indexOf(id);if(i>=0)novaRecent.splice(i,1);
+  novaRecent.unshift(id);novaRecent.splice(20);
+  localStorage.setItem("nova_recent",JSON.stringify(novaRecent));
+}
+function openDetails(id){
+  const w=wallpapers.find(x=>x.id===id);if(!w)return;
+  viewed(id);
+  const m=document.getElementById("detailsModal");if(!m)return;
+  document.getElementById("dImg").src=w.img;
+  document.getElementById("dTitle").textContent=w.title;
+  document.getElementById("dCat").textContent=w.cat;
+  document.getElementById("dDesc").textContent=`خلفية عمودية محسنة للهاتف بمقاس 1200×2640. ${w.title} مصنفة ضمن ${w.cat}.`;
+  document.getElementById("dMeta").innerHTML=`
+    <div class="glass rounded-xl p-3"><b>1200×2640</b><span class="block text-xs text-neutral-500">Resolution</span></div>
+    <div class="glass rounded-xl p-3"><b>${formatNum(w.downloads)}</b><span class="block text-xs text-neutral-500">Downloads</span></div>
+    <div class="glass rounded-xl p-3"><b>${formatNum(w.likes)}</b><span class="block text-xs text-neutral-500">Likes</span></div>
+    <div class="glass rounded-xl p-3"><b>Android</b><span class="block text-xs text-neutral-500">Compatibility</span></div>`;
+  document.getElementById("dFav").onclick=()=>fav(w.id);
+  document.getElementById("dDownload").onclick=()=>download(w.id);
+  const similar=wallpapers.filter(x=>x.id!==w.id&&x.cat===w.cat).slice(0,3);
+  document.getElementById("similarGrid").innerHTML=similar.map(x=>`<button onclick="openDetails(${x.id})" class="aspect-[5/11] rounded-xl overflow-hidden"><img src="${x.img}" class="w-full h-full object-cover" alt="${x.title}"></button>`).join("");
+  m.classList.replace("hidden","flex");
+}
+function closeDetails(){document.getElementById("detailsModal")?.classList.replace("flex","hidden");}
+function collectionCard(w){return `<button onclick="openDetails(${w.id})" class="glass rounded-2xl overflow-hidden text-right"><div class="aspect-[5/11]"><img src="${w.img}" class="w-full h-full object-cover" loading="lazy"></div><div class="p-2 text-xs font-bold truncate">${w.title}</div></button>`}
+function openCollection(){document.getElementById("collectionModal")?.classList.replace("hidden","flex");collectionTab("favorites");}
+function closeCollection(){document.getElementById("collectionModal")?.classList.replace("flex","hidden");}
+function collectionTab(tab){
+  let ids=tab==="favorites"?favorites:tab==="downloads"?downloadHistory:novaRecent;
+  const list=ids.map(id=>wallpapers.find(w=>w.id===id)).filter(Boolean);
+  const el=document.getElementById("collectionContent");
+  if(el)el.innerHTML=list.length?list.map(collectionCard).join(""):`<div class="col-span-full py-16 text-center text-neutral-500">مازال ما كاين حتى محتوى هنا.</div>`;
+}
+function showRecommended(){
+  const likedCats={}; favorites.map(id=>wallpapers.find(w=>w.id===id)).filter(Boolean).forEach(w=>likedCats[w.cat]=(likedCats[w.cat]||0)+1);
+  const preferred=Object.keys(likedCats).sort((a,b)=>likedCats[b]-likedCats[a])[0];
+  let list=preferred?wallpapers.filter(w=>w.cat===preferred):wallpapers.slice().sort((a,b)=>b.downloads-a.downloads);
+  list=list.filter(w=>!favorites.includes(w.id)).slice(0,4);
+  const el=document.getElementById("recommendedGrid");if(el)el.innerHTML=list.map(collectionCard).join("");
+}
+function addDetailsButtons(){
+  document.querySelectorAll("#grid article").forEach(card=>{
+    if(card.querySelector(".details-open"))return;
+    const imgBtn=card.querySelector("button.block");
+    if(imgBtn){imgBtn.onclick=(e)=>{e.preventDefault();const id=Number(imgBtn.getAttribute("onclick").match(/\d+/)?.[0]);if(id)openDetails(id)};}
+  });
+}
+function renderPremiumV2(){
+  try{renderPremium();addDetailsButtons();showRecommended();}catch(e){}
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  renderCollections();renderColors();renderPremiumV2();showRecommended();
+});
+
+</script>
+
+<nav id="mobileBottomNav" class="md:hidden fixed bottom-3 left-3 right-3 z-[90] glass rounded-2xl border border-white/10 px-2 py-2 shadow-2xl">
+  <div class="grid grid-cols-5 gap-1 text-center">
+    <button onclick="goTop()" class="rounded-xl py-2 text-[10px] text-neutral-400 hover:text-white"><i class="fa-solid fa-house block text-base mb-1"></i>Home</button>
+    <button onclick="setQuickFilter('trending')" class="rounded-xl py-2 text-[10px] text-neutral-400 hover:text-white"><i class="fa-solid fa-fire block text-base mb-1"></i>Trending</button>
+    <button onclick="toggleSearch();window.scrollTo({top:0,behavior:'smooth'})" class="rounded-xl py-2 text-[10px] text-neutral-400 hover:text-white"><i class="fa-solid fa-magnifying-glass block text-base mb-1"></i>Search</button>
+    <button onclick="showFavorites()" class="rounded-xl py-2 text-[10px] text-neutral-400 hover:text-white"><i class="fa-regular fa-heart block text-base mb-1"></i>Favorites</button>
+    <button onclick="openProfile()" class="rounded-xl py-2 text-[10px] text-neutral-400 hover:text-white"><i class="fa-regular fa-user block text-base mb-1"></i>Profile</button>
+  </div>
+</nav>
+</body>
+</html>
